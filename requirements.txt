@@ -1,0 +1,26 @@
+onpython-dotenv # For reading environment variables stored in .env file
+langchain 
+langchain-community # For community features
+langchain-openai # For embeddings
+langchain-chroma # For vector database
+openai # For embeddingsime #have first...
+
+python-dotenv # For reading environment variables stored in .env file
+langchain 
+langchain-community # For community features
+langchain-openai # For embeddings
+langchain-chroma
+openai # For embeddings
+tiktoken # For embeddings 
+unstructured
+# onnxruntime==1.17.1 # chromadb dependency: on Mac use `conda install onnxruntime -c conda-forge`
+# For Windows users, install Microsoft Visual C++ Build Tools first
+# install onnxruntime before installing `chromadb`
+onnxruntime
+chromadb # Vector storage
+
+# install markdown depenendies with: `pip install "unstructured[md]"` after install the requirements file. Leave this line commented out. 
+
+pydantic
+ddgs  # Updated DuckDuckGo search
+wikipedia 

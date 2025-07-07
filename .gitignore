@@ -1,0 +1,15 @@
+.env
+chroma_*
+chroma
+.DS_Store
+# Exclude entire data directory
+data/
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.venv/
+venv/

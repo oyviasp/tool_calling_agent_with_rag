@@ -1,0 +1,15 @@
+
+
+--- Research Output ---
+Timestamp: 2025-07-07 16:44:06
+------------------------------
+Et godt eksempel på en vedlikeholdsfeilmelding:
+- Beskrivende og kort tittel
+- Vedlikehold Oppdatert info til drift og planlegger
+- Prioritering i henhold til prioriteringsmatrisen
+- Teknisk objekt på laveste nivå
+Beskrivelsen inneholder driftsstans, materiell og utstyr
+
+Et sammendrag av god feilmelding:
+En god feilmelding bør være beskrivende, prioritere oppgaver, og inneholde relevant informasjon for å forstå og fullføre jobben.
+------------------------------
