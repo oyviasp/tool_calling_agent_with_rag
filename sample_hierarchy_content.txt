@@ -1,0 +1,49 @@
+=== Document 1 ===
+Section: 80000000
+Content:
+Technical Location: 80000000
+Description: HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR
+Hierarchy Path: 80000000 - HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR
+Level: 1
+
+
+=== Document 2 ===
+Section: 80000001
+Content:
+Technical Location: 80000001
+Description: Primary Metal heleide verk
+Hierarchy Path: 80000000 - HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR > 80000001 - Primary Metal heleide verk
+Level: 2
+Parent: 80000000 - HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR
+
+
+=== Document 3 ===
+Section: 80000002
+Content:
+Technical Location: 80000002
+Description: Primary Metal Høyanger
+Hierarchy Path: 80000000 - HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR > 80000001 - Primary Metal heleide verk > 80000002 - Primary Metal Høyanger
+Level: 3
+Parent: 80000001 - Primary Metal heleide verk
+
+
+=== Document 4 ===
+Section: 80203320
+Content:
+Technical Location: 80203320
+Description: Recycling Høyanger
+Hierarchy Path: 80000000 - HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR > 80000001 - Primary Metal heleide verk > 80000002 - Primary Metal Høyanger > 80203320 - Recycling Høyanger
+Level: 5
+Parent: 80000002 - Primary Metal Høyanger
+
+
+=== Document 5 ===
+Section: 80203321
+Content:
+Technical Location: 80203321
+Description: Bygg Recycling Høyanger
+Hierarchy Path: 80000000 - HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR > 80000001 - Primary Metal heleide verk > 80000002 - Primary Metal Høyanger > 80203320 - Recycling Høyanger > 80203321 - Bygg Recycling Høyanger
+Level: 7
+Parent: 80203320 - Recycling Høyanger
+
+

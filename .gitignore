@@ -1,6 +1,8 @@
 .env
 chroma_*
 chroma
+# Hierarchy database (can be regenerated)
+hierarchy/
 .DS_Store
 # Exclude entire data directory
 data/
