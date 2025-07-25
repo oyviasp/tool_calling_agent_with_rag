@@ -21,7 +21,7 @@ load_dotenv()
 openai.api_key = os.environ['OPENAI_API_KEY']
 
 CHROMA_PATH = "chroma"
-DATA_PATH = "data/pdf"  # Will search in both books and pdf subdirectories
+DATA_PATH = "data"  # Base data directory
 
 
 def main():
@@ -37,22 +37,20 @@ def generate_data_store():
 def load_documents():
     documents = []
     
-    # Load PDF files from pdf directory
+    # Load PDF files from pdf subdirectory
     pdf_path = os.path.join(DATA_PATH, "pdf")
     if os.path.exists(pdf_path):
         pdf_loader = DirectoryLoader(pdf_path, glob="*.pdf", loader_cls=PyPDFLoader)
         pdf_documents = pdf_loader.load()
         documents.extend(pdf_documents)
         print(f"Loaded {len(pdf_documents)} PDF files from {pdf_path}")
+    else:
+        print(f"PDF directory not found: {pdf_path}")
     
-    pdf_loader = DirectoryLoader(DATA_PATH, glob="*.pdf", loader_cls=PyPDFLoader)
-    pdf_documents = pdf_loader.load()
-    documents.extend(pdf_documents)
-    
-    # Load hierarchy JSON files (contains structured hierarchy data)
-    hierarchy_documents = load_hierarchy_json()
-    documents.extend(hierarchy_documents)
-    
+    # Load hierarchy data
+    #hierarchy_documents = load_hierarchy_json()
+    #documents.extend(hierarchy_documents)
+
     print(f"Total documents loaded: {len(documents)}")
     return documents
 
@@ -91,7 +89,7 @@ def save_to_chroma(chunks: list[Document]):
 
 
 def load_hierarchy_json():
-    """Load and process hierarchy JSON files for RAG search"""
+    """Load and process hierarchy JSON files for RAG search - only production data"""
     documents = []
     
     # Path to hierarchy JSON files
@@ -101,24 +99,26 @@ def load_hierarchy_json():
         print(f"Hierarchy directory not found: {hierarchy_path}")
         return documents
     
-    # Look for JSON files
-    json_files = [f for f in os.listdir(hierarchy_path) if f.endswith('.json')]
+    # Only load production hierarchy file
+    production_file = "hierarchy_main.json"
+    json_path = os.path.join(hierarchy_path, production_file)
     
-    for json_file in json_files:
-        json_path = os.path.join(hierarchy_path, json_file)
+    if not os.path.exists(json_path):
+        print(f"Production hierarchy file not found: {json_path}")
+        return documents
+    
+    try:
+        with open(json_path, 'r', encoding='utf-8') as f:
+            hierarchy_data = json.load(f)
         
-        try:
-            with open(json_path, 'r', encoding='utf-8') as f:
-                hierarchy_data = json.load(f)
-            
-            # Process hierarchy data into searchable documents
-            processed_docs = process_hierarchy_json(hierarchy_data, json_path)
-            documents.extend(processed_docs)
-            
-            print(f"Loaded hierarchy JSON: {len(processed_docs)} sections from {json_file}")
-            
-        except Exception as e:
-            print(f"Error loading JSON file {json_file}: {e}")
+        # Process hierarchy data into searchable documents
+        processed_docs = process_hierarchy_json(hierarchy_data, json_path)
+        documents.extend(processed_docs)
+        
+        print(f"Loaded production hierarchy JSON: {len(processed_docs)} sections from {production_file}")
+        
+    except Exception as e:
+        print(f"Error loading production hierarchy file {production_file}: {e}")
     
     return documents
 

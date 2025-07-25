@@ -1,0 +1,23 @@
+
+
+--- Output ---
+Timestamp: 2025-07-11 09:37:39
+------------------------------
+KOMBINASJONSKRAN NOELL 1 Hierarchy:
+
+80000000 (HYDRO ALUMINIUM VEDLIKEHOLDSSTRUKTUR)
+    80000001 (Primary Metal heleide verk)
+        80000004 (Primary Metal Sunndal)
+            80265242 (Prebake Sunndal)
+                80265256 (Prebake Elektrolyse Sunndal)
+                    80265260 (Kraner og Løfteutstyr Elektrolyse)
+                        80040103 (Spesialbygde Kraner for El.lyse Sunndal)
+                            80263111 (KOMBINASJONSKRANER NOELL)
+                                80261280 (KOMBINASJONSKRAN NOELL 1)
+                                    80261281 - KRANBRO KOMBINASJONSKRAN 1
+                                    80261282 - KATT VERKTØYSEKSJON KOMBINASJONSKRAN 1
+                                    80261283 - KRANKABIN KOMBINASJONSKRAN 1
+                                    80261286 - DEKKESILO KOMBINASJONSKRAN 1
+                                    80261287 - HYDRAULIKK KOMBINASJONSKRAN 1
+                                    80261288 - EL ANLEGG M/STYRING KOMBINASJONSKRAN 1
+------------------------------

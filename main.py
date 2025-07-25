@@ -92,8 +92,8 @@ agent = create_tool_calling_agent(
     prompt=prompt,
     tools=tools,
 )
-agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, return_intermediate_steps=True)
-
+#agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, return_intermediate_steps=True)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=False)
 # Chat functionality with history
 def chat_with_agent():
     global used_tools, found_sources

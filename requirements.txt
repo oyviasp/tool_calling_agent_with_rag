@@ -13,8 +13,6 @@ chromadb # Vector storage
 # Excel processing for hierarchy
 pandas
 openpyxl
+xlrd
 
 pydantic
-gunicorn
-pandas
-xlrd
